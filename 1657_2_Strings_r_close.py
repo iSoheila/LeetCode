@@ -8,21 +8,25 @@ def main():
     Input: word1 = "abc", word2 = "bca"
     Output: true
     '''
-    print(close_Strings("abc", "bca"))
-
+    print(close_strings("abc", "bca"))
+    assert(close_strings("abc", "bca"))
     '''
     Input: word1 = "a", word2 = "aa"
     Output: false
     '''
-    print(close_Strings("a", "aa"))
+    print(close_strings("a", "aa"))
+    assert(close_strings("a", "aa")==False)
 
     '''
     Input: word1 = "cabbba", word2 = "abbccc"
     Output: true
     '''
-    print(close_Strings("cabbba", "abbccc"))
+    print(close_strings("cabbba", "abbccc"))
+    assert(close_strings("cabbba", "abbccc"))
 
-def close_Strings(word1, word2):
+   
+
+def close_strings(word1, word2):
      
     if len(word1)!= len(word2) or set(word1) != set(word2):
         return False
